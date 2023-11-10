@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add your styles here */
+        .development-message {
+            display: none;
+            text-align: center;
+            color: #fff;
+            background-color: #333;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3f6d41; /* Green color */
+            padding: 10px;
+        }
+
+        .logo {
+            color: #fff;
+        }
+
+        .cabeçalho-link ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .cabeçalho-link li {
+            margin: 0 15px;
+        }
+
+        .cabeçalho-link button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+   <div class="backgroud">
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-q"></i>
+        </div><!--logo-->
+        <div class="cabeçalho-link">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Sobre</a>
+                </li>
+                <li>
+                    <a href="#">Serviços</a>
+                </li>
+                <li>
+                    <a href="#">Trabalhos</a>
+                </li>
+            </ul>
+            <button id="contactBtn">Meu contato</button>
+        </div><!--cabeçalho link-->
+    </header>
+    <div class="containe-text">
+        <div class="text">
+            <h3>Olá, pessoal</h3>
+            <h1>Eu sou <span>Querobim Isac Augusto</span></h1>
+            <p> Bem-vindo ao meu site. Este é um mini perfil meu. Aqui você poderá ver meu contato, assim como minhas formações. <br>Obrigado por acessar o meu site.</p>
+            <div class="minhas-contas"> 
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+            </div><!--redes sociais-->
+            <button class="btn" id="aboutMeBtn">Sobre Mim</button>
+        </div>
+    </div>
+    <div class="development-message" id="devMessage">Site em desenvolvimento</div>
+</div><!--backgroud-->
+
+<script>
+    // JavaScript code
+    document.getElementById('contactBtn').addEventListener('click', function() {
+        showMessage();
+    });
+
+    document.getElementById('aboutMeBtn').addEventListener('click', function() {
+        showMessage();
+    });
+
+    function showMessage() {
+        document.getElementById('devMessage').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('devMessage').style.display = 'none';
+        }, 3000); // Hide the message after 3 seconds
+    }
+</script>
+
+</body>
+</html>
